@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển dụng Giao hàng Nhanh - Gia nhập GHN ngay!</title>
+    <!-- Tailwind CSS CDN để xây dựng giao diện nhanh chóng và responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ghn-red': '#ED1C24',
+                        'ghn-blue': '#002E6D',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome cho các icon mạng xã hội -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Sử dụng font Inter cho toàn bộ trang web để đảm bảo sự đồng bộ và hiện đại */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Tùy chỉnh các hiệu ứng chuyển động và đổ bóng */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hiệu ứng trượt cho các bước quy trình */
+        .step {
+            transition: transform 0.3s ease-in-out;
+        }
+        .step:hover {
+            transform: scale(1.05);
+        }
+
+        /* Màu nền gradient cho phần hero */
+        .hero-bg {
+            background-image: linear-gradient(to right, #002e6d, #004a9d);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header - Thanh điều hướng chính -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo Giao hàng Nhanh -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://i.postimg.cc/bv3xbV6k/2025-07-25-8-33-57-AM.jpg" alt="Giao hàng Nhanh Logo" class="h-10">
+            </a>
+            <!-- Nút ứng tuyển cho mobile -->
+            <a href="#form-ung-tuyen" class="bg-ghn-red text-white py-2 px-6 rounded-full text-sm font-semibold md:hidden">
+                Ứng tuyển ngay
+            </a>
+            <!-- Menu cho desktop -->
+            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+                <li><a href="#vi-tri" class="hover:text-ghn-red transition-colors duration-300">Vị trí</a></li>
+                <li><a href="#quy-trinh" class="hover:text-ghn-red transition-colors duration-300">Quy trình</a></li>
+                <li><a href="#lien-he" class="hover:text-ghn-red transition-colors duration-300">Liên hệ</a></li>
+            </ul>
+            <!-- Nút ứng tuyển cho desktop -->
+            <a href="#form-ung-tuyen" class="hidden md:block bg-ghn-red text-white py-3 px-8 rounded-full text-lg font-bold hover:bg-red-700 transition-colors duration-300 shadow-lg">
+                Ứng tuyển ngay
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Phần giới thiệu (Hero Section) -->
+        <section class="hero-bg text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate-fade-in-up">
+                    Gia nhập GHN, vươn xa cùng sự nghiệp!
+                </h1>
+                <p class="text-lg md:text-2xl font-light mb-8 max-w-3xl mx-auto animate-fade-in">
+                    Khám phá cơ hội nghề nghiệp tại Giao hàng Nhanh. Nơi bạn được thách thức và phát triển bản thân mỗi ngày.
+                </p>
+                <a href="#form-ung-tuyen" class="bg-ghn-red text-white py-4 px-12 rounded-full text-xl font-bold uppercase hover:bg-red-700 transition-transform duration-300 transform hover:scale-105 shadow-xl">
+                    Ứng tuyển ngay
+                </a>
+            </div>
+        </section>
+
+        <!-- Các vị trí tuyển dụng -->
+        <section id="vi-tri" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-ghn-blue mb-4">
+                    Vị trí tuyển dụng hấp dẫn
+                </h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Chúng tôi đang tìm kiếm những tài năng trẻ, nhiệt huyết để cùng xây dựng GHN phát triển mạnh mẽ.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card vị trí 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 card-hover transition-all duration-300">
+                        <i class="fa-solid fa-chart-line text-ghn-red text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-ghn-blue mb-2">Nhân viên Phát triển Thị trường</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Mở rộng thị trường, tìm kiếm đối tác mới, tăng trưởng doanh thu.
+                        </p>
+                        <a href="#form-ung-tuyen" class="text-ghn-red font-semibold hover:underline">
+                            Tìm hiểu thêm & Ứng tuyển <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <!-- Card vị trí 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 card-hover transition-all duration-300">
+                        <i class="fa-solid fa-user-tie text-ghn-red text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-ghn-blue mb-2">HRBP</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Đồng hành cùng các phòng ban, xây dựng văn hóa, quản lý nhân sự.
+                        </p>
+                        <a href="#form-ung-tuyen" class="text-ghn-red font-semibold hover:underline">
+                            Tìm hiểu thêm & Ứng tuyển <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <!-- Card vị trí 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 card-hover transition-all duration-300">
+                        <i class="fa-solid fa-briefcase text-ghn-red text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-ghn-blue mb-2">Business Development</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Phát triển kinh doanh, tìm kiếm cơ hội, xây dựng chiến lược.
+                        </p>
+                        <a href="#form-ung-tuyen" class="text-ghn-red font-semibold hover:underline">
+                            Tìm hiểu thêm & Ứng tuyển <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <!-- Card vị trí 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 card-hover transition-all duration-300">
+                        <i class="fa-solid fa-handshake-angle text-ghn-red text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-ghn-blue mb-2">Sales</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Đảm bảo mục tiêu kinh doanh, xây dựng quan hệ với khách hàng.
+                        </p>
+                        <a href="#form-ung-tuyen" class="text-ghn-red font-semibold hover:underline">
+                            Tìm hiểu thêm & Ứng tuyển <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quy trình ứng tuyển -->
+        <section id="quy-trinh" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-ghn-blue mb-12">
+                    Quy trình ứng tuyển nhanh chóng & Nhận việc ngay
+                </h2>
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <!-- Bước 1 -->
+                    <div class="flex-1 text-center mb-8 md:mb-0 step p-4 rounded-xl">
+                        <div class="bg-ghn-red text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">
+                            1
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Điền Form</h4>
+                        <p class="text-gray-600">Ứng viên điền thông tin và CV.</p>
+                    </div>
+                    <!-- Icon mũi tên -->
+                    <div class="hidden md:block text-4xl text-ghn-blue mb-8">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </div>
+                    <div class="block md:hidden text-4xl text-ghn-blue mb-8">
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                    </div>
+                    <!-- Bước 2 -->
+                    <div class="flex-1 text-center mb-8 md:mb-0 step p-4 rounded-xl">
+                        <div class="bg-ghn-red text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">
+                            2
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Sơ vấn với HRBP</h4>
+                        <p class="text-gray-600">Đội ngũ HRBP liên hệ và sàng lọc hồ sơ.</p>
+                    </div>
+                    <!-- Icon mũi tên -->
+                    <div class="hidden md:block text-4xl text-ghn-blue mb-8">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </div>
+                    <div class="block md:hidden text-4xl text-ghn-blue mb-8">
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                    </div>
+                    <!-- Bước 3 -->
+                    <div class="flex-1 text-center mb-8 md:mb-0 step p-4 rounded-xl">
+                        <div class="bg-ghn-red text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">
+                            3
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Phỏng vấn Line Manager</h4>
+                        <p class="text-gray-600">Trò chuyện chuyên sâu với quản lý trực tiếp.</p>
+                    </div>
+                    <!-- Icon mũi tên -->
+                    <div class="hidden md:block text-4xl text-ghn-blue mb-8">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </div>
+                    <div class="block md:hidden text-4xl text-ghn-blue mb-8">
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                    </div>
+                    <!-- Bước 4 -->
+                    <div class="flex-1 text-center step p-4 rounded-xl">
+                        <div class="bg-ghn-red text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">
+                            4
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Onboarding</h4>
+                        <p class="text-gray-600">Chào đón ứng viên chính thức gia nhập GHN.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form ứng tuyển giả định -->
+        <section id="form-ung-tuyen" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl md:text-5xl font-bold text-ghn-blue mb-4 text-center">
+                    Gia nhập GHN ngay hôm nay
+                </h2>
+                <p class="text-lg text-gray-600 mb-12 text-center">
+                    Hãy để lại thông tin, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+                </p>
+                <form class="bg-gray-100 p-8 md:p-12 rounded-3xl shadow-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" placeholder="Họ và tên" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-ghn-red transition-colors duration-300">
+                        <input type="email" placeholder="Email" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-ghn-red transition-colors duration-300">
+                        <input type="tel" placeholder="Số điện thoại" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-ghn-red transition-colors duration-300">
+                        <select class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-ghn-red transition-colors duration-300 text-gray-500">
+                            <option value="">Chọn vị trí ứng tuyển</option>
+                            <option value="market_dev">Nhân viên Phát triển Thị trường</option>
+                            <option value="hrbp">HRBP</option>
+                            <option value="biz_dev">Business Development</option>
+                            <option value="sales">Sales</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Giới thiệu bản thân và kinh nghiệm (tùy chọn)" rows="4" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-ghn-red transition-colors duration-300 mb-6"></textarea>
+                    <div class="flex items-center justify-center">
+                        <button type="submit" class="bg-ghn-red text-white py-4 px-12 rounded-full text-xl font-bold uppercase hover:bg-red-700 transition-transform duration-300 transform hover:scale-105 shadow-xl">
+                            Gửi hồ sơ
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Liên hệ -->
+        <section id="lien-he" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-ghn-blue mb-4">
+                    Liên hệ
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Nếu bạn có bất kỳ thắc mắc nào, đừng ngần ngại liên hệ với chúng tôi qua các kênh sau.
+                </p>
+                <a href="mailto:hr@ghn.vn" class="text-2xl md:text-3xl text-ghn-red font-semibold hover:underline transition-colors duration-300">
+                    hr@ghn.vn
+                </a>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <!-- Các icon mạng xã hội -->
+                    <a href="#" class="text-gray-600 hover:text-ghn-blue transition-colors duration-300 text-3xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-ghn-blue transition-colors duration-300 text-3xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-ghn-blue transition-colors duration-300 text-3xl"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-ghn-blue transition-colors duration-300 text-3xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-ghn-blue transition-colors duration-300 text-3xl"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-ghn-blue transition-colors duration-300 text-3xl"><i class="fab fa-twitter"></i></a> <!-- Sử dụng Twitter làm đại diện cho Zalo vì không có icon riêng -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ghn-blue text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2024 Giao hàng Nhanh. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
